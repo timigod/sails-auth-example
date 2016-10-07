@@ -30,17 +30,6 @@ module.exports = {
       return obj;
     }
   },
-  validationMessages: {
-    password: {
-      required: "Password is required"
-    },
-
-    email: {
-      required: "Email is required",
-      email: "Invalid email",
-      unique: "Email already registered"
-    }
-  },
 
   beforeCreate: function(values, cb){
     bcrypt.hash(values.password, 10, function (err, hash) {
