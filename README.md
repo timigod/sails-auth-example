@@ -1,3 +1,5 @@
-# auth-example
+# sails-auth-example
 
-a [Sails](http://sailsjs.org) application
+Example sails application authentication API for [hellosails.com](https://hellosails.com).
+
+[Read the blog post]()
