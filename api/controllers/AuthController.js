@@ -1,8 +1,8 @@
 module.exports = {
-  
-  login(req, res) {
-    const email = req.param('email');
-    const password = req.param('password');
+
+  login: function (req, res) {
+    var email = req.param('email');
+    var password = req.param('password');
 
     verifyParams(res, email, password)
 
@@ -19,13 +19,13 @@ module.exports = {
 };
 
 
-const signInUser = (req, res, password, user) => {
+function signInUser(req, res, password, user) {
   User.comparePassword(password, user).then(
     function (valid) {
       if (!valid) {
         return this.invalidEmailOrPassword();
       } else {
-        const responseData = {
+        var responseData = {
           user: user,
           token: generateToken(user.id)
         }
@@ -38,11 +38,11 @@ const signInUser = (req, res, password, user) => {
 };
 
 
-const invalidEmailOrPassword = (res) => {
+function invalidEmailOrPassword(res){
   return ResponseService.json(401, res, "Invalid email or password")
 };
 
-const verifyParams = (res, email, password) => {
+function verifyParams(res, email, password){
   if (!email || !password) {
     return ResponseService.json(401, res, "Email and password required")
   }
