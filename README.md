@@ -1,5 +1,5 @@
 # sails-auth-example
 
-Example sails application authentication API for [hellosails.com](https://hellosails.com).
+Example sails authentication API for [hellosails.com](https://hellosails.com).
 
-[Read the blog post]()
+[Read the blog post](https://hellosails.com/building-api-authentication-from-scratch-part-2/)
